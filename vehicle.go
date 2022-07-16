@@ -29,12 +29,12 @@ type bike struct{
 
 // Values array for the feedback.json file
 type Values struct{
-	Models []Mode1 'json:"values"'
+	Mode1s []Mode1 'json:"values"'
 
 }
 
 // Model array for the feedback.json file
-type mode1 struct{
+type Mode1 struct{
 	Name string 'json:"mode1"'
 	Feedback []string 'json:"feedback"'
 }
@@ -46,7 +46,7 @@ type feedbackResult struct{
 	feedbackNeutral int
 }
 
-var vehicleResult map[string] feedbackResult
+var vehicleResult map[string]feedbackResult
 
 var inventory []vehicle
 
@@ -76,7 +76,7 @@ func init() {
 		truck{"F-150", "Ford", "Truck"},
 		truck{"RAM1500", "Dodge", "Truck"}}
 
-//	vehicleResult = make(map[string]feedbackResult)
+	vehicleResult = make(map[string]feedbackResult)
 
 }
 
